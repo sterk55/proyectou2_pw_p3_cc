@@ -8,13 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <header></header>
     <nav></nav>
     <section>
         <h1>Mi Primer Proyecto en VUE</h1>
-        <div id="myApp"></div>
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <div id="myApp">
+            <p1>{{1+1}}</p1><br>
+            <p1>{{true}}</p1><br>
+            <p1>{{!true? 'Activo': 'Inactivo'}}</p1><br>
+            <label for="">{{nombre}}</label><br>
+            <label for="">{{apellido}}</label><br>
+            <button v-on:click="cambiarNombre()">Cambiar Nombre</button><br>
+            <button v-on:click="cambiarApellido()">Cambiar Nombre</button>
+
+        </div>
+        
         <script src="js/configuracion.js"></script>
     </section>
     <footer></footer>
