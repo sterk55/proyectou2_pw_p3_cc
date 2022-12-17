@@ -10,17 +10,17 @@ const frases = [{ texto: 'siuuuu', autor: 'el bicho' },
 
 { texto: 'anda pa alla bobo', autor: 'messi' },
 
-{ texto: 'siuuuu2', autor: 'el bicho2' },
+{ texto: ' calla gordo', autor: 'cuortois' },
 
-{ texto: 'anda pa alla bobo2', autor: 'messi2' },
+{ texto: 'bueno, vamo a jugar', autor: 'aguero' },
 
-{ texto: 'siuuuu3', autor: 'el bicho3' },
+{ texto: 'perdon a todo el ecuador', autor: 'goat valencia' },
 
-{ texto: 'anda pa alla bobo3', autor: 'messi3' },
+{ texto: 'ter stegen es mejor', autor: 'ibai' },
 
-{ texto: 'siuuuu4', autor: 'el bicho4' },
+{ texto: 'aaaaaaaaaaa', autor: 'maradona' },
 
-{ texto: 'anda pa alla bobo4', autor: 'messi4' },]
+{ texto: 'carritos chocones', autor: 'hincapie' },]
 
 
 
@@ -40,15 +40,61 @@ const app = Vue.createApp({
 
         return {
 
-            arreglo: frases
+            arreglo: frases,
+
+            fraseNueva:null
+
+        }
+
+
+
+    },
+
+    methods:{
+
+        agregarFrase({charCode}){
+
+            console.log("Mensaje desestructurado")
+
+            console.log(charCode)
+
+            const fraseObjetoNueva={
+
+            texto:this.fraseNueva,
+
+            autor:'Jorge'
+
+           }
+
+            this.arreglo.unshift(fraseObjetoNueva)
+
+        },
+
+        agregarFraseModificador(event){
+
+            console.log("Mensaje")
+
+            console.log(event.charCode)
+
+            if(event.charCode!==13) return
+
+
+
+            const fraseObjetoNueva={
+
+            texto:this.fraseNueva,
+
+           
+
+           }
+
+            this.arreglo.unshift(fraseObjetoNueva)
 
         }
 
 
 
     }
-
-
 
 })
 

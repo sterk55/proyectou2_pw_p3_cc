@@ -17,8 +17,15 @@
             {{arreglo}}
 
 
+        <n1>Frases:</n1>
         <ul>
-            <li v-for="frase in arreglo">{{' frase: '+ frase.texto + ' Autor: ' + frase.autor}}</li>
+            <li v-for="({texto, autor}, index) in arreglo">
+                <span>{{index+1}} - {{texto}}</span>
+                <blockquote>{{autor}}</blockquote>
+
+               <!-- {{' frase: '+ frase.texto + ' Autor: ' + frase.autor}}-->
+            
+            </li>
         </ul>
         </div>
     </section>
