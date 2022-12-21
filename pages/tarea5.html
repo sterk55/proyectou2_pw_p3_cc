@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <section>
+        <div id="myApp2">
+            <label for="">Nombre: </label><br>
+            <input type="text" v-model="nombreNuevo"><br>
+            <label for="" >Apellido: </label><br>
+            <input type="text" v-model="apellidoNuevo"><br>
+            <label for="">Direccion: </label><br>
+            <input type="text" v-model="direccionNuevo"><br>
+
+            <button v-on:click="agregarDatos" >Agregar Datos</button><br>
+            <br>
+            <li v-for="({nombre,apellido, direccion},index) in arreglo">
+
+                
+
+                <span>Datos: {{index+1}}: - Nombre: {{nombre}}, Apellido: {{apellido}}, Direccion: {{direccion}}</span>
+            </li>
+        </div>
+    </section>
+    <footer></footer>
+    <script src="../js/tarea5.js"></script>
+</body>
+</html>
